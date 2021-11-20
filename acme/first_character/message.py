@@ -12,11 +12,11 @@ def first_phase():
 
 
 def second_phase():
-    print('Primeira Fase')
+    print('Parabéns! Você avançou para a Segunda Fase')
 
 
 def third_phase():
-    print('Primeira Fase')
+    print('Parabéns! Você avançou para a Terceira Fase')
 
 def game_win():
     print('Você venceu.')
