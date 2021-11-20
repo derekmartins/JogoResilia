@@ -1,5 +1,6 @@
 from acme import message, selection
 from acme.first_character import main as first_character
+from acme.second_character import main as second_character
 
 
 def run():
@@ -19,6 +20,9 @@ def run():
                 first_character.play()
                 character_condition = False
 
+            if response == '2':
+                second_character.play()
+                character_condition = False
 
         play_again_condition = True
         while play_again_condition:
