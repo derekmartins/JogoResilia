@@ -10,6 +10,7 @@ def run():
 
         character_condition = True
         while character_condition:
+            message.start()
             message.menu()
             response = selection.get_input()
 

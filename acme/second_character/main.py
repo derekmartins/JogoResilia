@@ -18,7 +18,7 @@ def phase(start_message, answers, desired_answer, next_phase, has_input = True):
         if has_input:
             answer = get_input()
 
-        if answer not in ['s', 'n']:
+        if answer not in answers:
             message.error()
             continue
 
@@ -32,7 +32,7 @@ def phase(start_message, answers, desired_answer, next_phase, has_input = True):
 
 
 def first_phase():
-    phase(message.first_phase, ['s', 'n'], 's', second_phase)
+    phase(message.first_phase, ['1', '2', '3', '4'], '2', second_phase)
 
 
 def second_phase():

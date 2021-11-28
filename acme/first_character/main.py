@@ -4,15 +4,13 @@ from . import message
 
 
 def play():
-    print('First Character Main Play')
-
     message.start()
     first_phase()
 
 
 def first_phase():
 
-    desired_answer = 's'
+    desired_answer = '1'
 
     condition = True
     while condition:
@@ -20,7 +18,7 @@ def first_phase():
         message.first_phase()
         answer = get_input()
 
-        if answer not in ['s', 'n']:
+        if answer not in ['1', '2']:
             message.error()
             continue
 
@@ -29,13 +27,13 @@ def first_phase():
             condition = False
 
         else:
-            message.game_over()
+            message.first_phase_game_over(answer)
             condition = False
 
 
 def second_phase():
 
-    desired_answer = 's'
+    desired_answer = '2'
 
     condition = True
     while condition:
@@ -43,7 +41,7 @@ def second_phase():
         message.second_phase()
         answer = get_input()
 
-        if answer not in ['s', 'n']:
+        if answer not in ['1', '2']:
             message.error()
             continue
 
@@ -52,12 +50,13 @@ def second_phase():
             condition = False
 
         else:
-            message.game_over()
+            message.second_phase_game_over(answer)
             condition = False
+
 
 def third_phase():
 
-    desired_answer = 's'
+    desired_answer = '1'
 
     condition = True
     while condition:
@@ -65,7 +64,7 @@ def third_phase():
         message.third_phase()
         answer = get_input()
 
-        if answer not in ['s', 'n']:
+        if answer not in ['1', '2']:
             message.error()
             continue
 
@@ -74,5 +73,5 @@ def third_phase():
             condition = False
 
         else:
-            message.game_over()
+            message.third_phase_game_over(answer)
             condition = False
