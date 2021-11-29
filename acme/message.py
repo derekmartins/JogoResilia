@@ -13,6 +13,7 @@ def menu():
     print('''
     1. Arthur, um jovem publicitário em uma vaga de estágio.
     2. Edvânio, o chefe de departamento.
+    3. Ariosvaldo, O zelador da empresa.
     '''.replace("    ", ''))
 
 
