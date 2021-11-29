@@ -1,7 +1,3 @@
-def menu():
-    print("Imagina um mega menu aqui...")
-
-
 def error():
     print("Você digitou errado, por favor escolha uma opção válida")
 
@@ -57,11 +53,12 @@ def third_phase():
     é colocado nessas condições.
 
     Graças ao seu bom comportamento, o dono da MakinaPoincaré, Gary Mag Carl,
-    conversar sobre o seu futuro e lhe fazer um pedido.
-    Não entrar na justiça, para que isso não seja noticiado na imprensa
+    veio conversar sobre o seu futuro e lhe fazer um pedido.
+
+    "-- Não entre na justiça, para que isso não seja noticiado na imprensa
     local. Você é publicitário, você sabe que isso pode queimar a
     imagem criada pela empresa. Em troca, você ganhar uma quantia simbólica
-    para o seu tratamento e para pagar as suas contas básicas.
+    para o seu tratamento e para pagar as suas contas básicas. "
     
     O que você faz?
 

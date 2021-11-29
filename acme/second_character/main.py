@@ -9,7 +9,8 @@ def play():
     message.start()
     first_phase()
 
-def phase(start_message, answers, desired_answer, next_phase, has_input = True):
+
+def phase(start_message, answers, desired_answer, next_phase, game_over, has_input=True):
 
     condition = True
     while condition:
@@ -27,16 +28,20 @@ def phase(start_message, answers, desired_answer, next_phase, has_input = True):
             condition = False
 
         else:
-            message.game_over()
-            condition = False    
+            game_over()
+            condition = False
 
 
 def first_phase():
-    phase(message.first_phase, ['1', '2', '3', '4'], '2', second_phase)
+    phase(message.first_phase, ['1', '2'], '1',
+          second_phase, message.first_phase_game_over)
 
 
 def second_phase():
-    phase(message.second_phase, ['s', 'n'], 's', third_phase)
+    phase(message.second_phase, ['1', '2'], '1',
+          third_phase, message.second_phase_game_over)
+
 
 def third_phase():
-    phase(message.third_phase, ['s', 'n'], 's', message.game_win)
+    phase(message.third_phase, ['1', '2'], '2',
+          message.game_win, message.third_phase_game_over)
